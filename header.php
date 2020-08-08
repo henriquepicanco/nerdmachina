@@ -58,7 +58,7 @@
 					<div class="site-header__content">
 						<?php get_template_part( 'components/navigation/social-navigation' ); ?>
 
-						<a class="donation-toggle" href="https://nerdmachina.com.br/apoie">
+						<a class="donation-toggle" href="https://nerdmachina.com/apoie">
 							<span class="text-toggle"><?php esc_html_e( 'Apoie-nos', 'nerdmachina' ); ?></span>
 						</a>
 					</div>

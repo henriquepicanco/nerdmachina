@@ -9,7 +9,7 @@
 
 if ( ! defined( 'NERDMACHINA_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'NERDMACHINA_VERSION', '1.0.0' );
+	define( 'NERDMACHINA_VERSION', '1.0.1' );
 }
 
 if ( ! function_exists( 'nerdmachina_setup' ) ) :
