@@ -1,0 +1,35 @@
+a {
+	color: $color__link;
+	text-decoration: none;
+
+	@media (prefers-color-scheme: dark) {
+		color: $dark__color-link;
+	}
+
+	&:visited {
+		color: $color__link-visited;
+
+		@media (prefers-color-scheme: dark) {
+			color: $dark__color-link;
+		}
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+		
+		@media (prefers-color-scheme: dark) {
+			color: $dark__color-link;
+		}
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}

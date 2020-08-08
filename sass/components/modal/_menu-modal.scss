@@ -1,0 +1,67 @@
+.menu-modal {
+    top: 0;
+    position: fixed;
+    left: -20.75rem;
+    background: transparent;
+    width: 20.75rem;
+    height: 100vh;
+    background: $color__background-body;
+    border-right: 1px solid $color__border-abbr;
+    z-index: 999;
+    transition: all 0.5s;
+    overflow-x: auto;
+
+	@media (prefers-color-scheme: dark) {
+        background: $dark__background-body;
+        border-color: $dark__border-color;
+	}
+
+    &.offcanvas-active {
+        left: 0;
+        transition: all 0.5s;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 3.8125rem;
+        padding: 0 2rem;
+        border-bottom: 1px solid $color__border-abbr;
+
+        @media (prefers-color-scheme: dark) {
+            border-color: $dark__border-color;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+        }
+
+        svg {
+            width: auto;
+            height: auto;
+            color: #333;
+
+            @media (prefers-color-scheme: dark) {
+                color: $dark__color-text;
+            }
+        }
+    }
+
+    
+	@media (prefers-color-scheme: dark) {
+        a {
+            color: $dark__color-link;
+        }
+	}
+
+    .social-navigation {
+        padding: 2rem;
+    }
+}

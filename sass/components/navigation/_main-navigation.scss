@@ -1,0 +1,22 @@
+.main-navigation {
+    display: flex;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        padding: 0 0 0 2rem;
+    }
+
+    li {
+        margin: 1rem 0;
+
+        a {
+            color: #333;
+
+            @media (prefers-color-scheme: dark) {
+                color: $dark__color-link;
+            }
+        }
+    }
+}

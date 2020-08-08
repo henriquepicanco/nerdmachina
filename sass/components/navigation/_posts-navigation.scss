@@ -1,0 +1,35 @@
+.pagination {
+    position: relative;
+
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.load-more-posts {
+    display: none;
+    padding: 2rem 1rem 3rem;
+    align-items: center;
+    justify-content: center;
+
+    .pagination + & {
+        display: flex;
+    }
+
+    button {
+        border: 0;
+        background: #ff0066;
+        color: #fff;
+        font-size: 1.25rem;
+        font-weight: bold;
+        padding: 0.625rem 2rem;
+        border-radius: 50rem;
+        cursor: pointer;
+
+        @media (prefers-color-scheme: dark) {
+            background: $dark__color-button;
+            color: $dark__background-body;
+        }
+    }
+}
