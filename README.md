@@ -7,6 +7,9 @@ Este tema está licenciado sob GPL 2.0 ou posterior, assim como o próprio WordP
 ## Changelog
 Abaixo, você encontra a lista de todas as mudanças que este já sofreu desde o seu lançamento.
 
+**Versão 1.1.1 - 10/08/2020**
+- Alteração do link do botão de apoio para reduzir a quantidade de redirecionamentos atestado pelo GTMetrix.
+
 **Versão 1.1 - 10/08/2020**
 - Personalização do botão que carrega a caixa de comentários do Disqus
 - Adição de estilos a caixa de comentários do Disqus
