@@ -26,14 +26,11 @@ get_header();
 				$nextPost = get_next_post();
 				$prevPost = get_previous_post();
 
-				$prevthumbnail150 = get_the_post_thumbnail_url($prevPost->ID, array( 'nerdmachina_archive_100x100' ) );
-				$prevthumbnail = get_the_post_thumbnail_url($prevPost->ID, array( '' ) );
+				$prevTitle = esc_html( 'Post anterior', 'nerdmachina' );
+				$nextTitle = esc_html( 'Próximo post', 'nerdmachina' );
 
-				$prevtitle = esc_html( 'Post anterior', 'nerdmachina' );
-				$nexttitle = esc_html( 'Próximo post', 'nerdmachina' );
-
-				$nextthumbnail = get_the_post_thumbnail_url($nextPost->ID, array( 'nerdmachina_archive_100x100' ) );
-				$nextthumbnail100 = get_the_post_thumbnail_url($nextPost->ID, array( '' ) );
+				$prevThumbnail = get_the_post_thumbnail( $prevPost->ID, array( 'nerdmachina_navigation_thumbnail' ) );
+				$nextThumbnail = get_the_post_thumbnail( $nextPost->ID, array( 'nerdmachina_navigation_thumbnail' ) );
 
 
 				the_post_navigation(
@@ -43,14 +40,11 @@ get_header();
 								<div class="post-outer">
 									<div class="post-inner">
 										<div class="entry-media">
-											<picture>
-												<source srcset="' . $prevthumbnail150 . '" media="(min-width: 0)">
-                            					<img src="' . $prevthumbnail . '" alt="%title">
-											</picture>
+											'. $prevThumbnail .'
 										</div>
 									</div>
 									<div class="post-inner">
-										<span class="tag">' . $prevtitle . '</span>
+										<span class="tag">' . $prevTitle . '</span>
 										<h5 class="entry-title">%title</h5>
 									</div>
 								</div>
@@ -61,14 +55,11 @@ get_header();
 								<div class="post-outer">
 									<div class="post-inner">
 										<div class="entry-media">
-											<picture>
-												<source srcset="' . $nextthumbnail150 . '" media="(min-width: 0)">
-                            					<img src="' . $nextthumbnail . '" alt="%title">
-											</picture>
+											'. $nextThumbnail .'
 										</div>
 									</div>
 									<div class="post-inner">
-										<span class="tag">' . $nexttitle . '</span>
+										<span class="tag">' . $nextTitle . '</span>
 										<h5 class="entry-title">%title</h5>
 									</div>
 								</div>

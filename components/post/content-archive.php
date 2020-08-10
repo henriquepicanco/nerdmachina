@@ -12,17 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="post-outer">
         <div class="post-inner">
-            <?php if ( has_post_thumbnail() ) : ?>
-                <div class="entry-media">
-                    <a href="<?php the_permalink(); ?>" rel="bookmark">
-                        <picture>
-                            <source srcset="<?php the_post_thumbnail_url( 'nerdmachina_archive_100x100' ); ?>" media="(min-width: 0) and (max-width: 767px)">
-                            <source srcset="<?php the_post_thumbnail_url( 'nerdmachina_archive_300x300' ); ?>" media="(min-width: 768px)">
-                            <img src="<?php the_post_thumbnail_url( 'thumbnail' ); ?>" alt="<?php the_title(); ?>">
-                        </picture>
-                    </a>
-                </div>
-            <?php endif; ?>
+            <?php nerdmachina_post_thumbnail(); ?>
         </div>
 
         <div class="post-inner">

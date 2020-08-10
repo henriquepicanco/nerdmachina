@@ -3,6 +3,19 @@
     position: sticky;
     top: 0;
     background: #fff;
+    z-index: 999;
+
+    .admin-bar & {
+        top: 0;
+
+        @media screen and (min-width: 600px) {
+            top: 46px;
+        }
+
+        @media screen and (min-width: 782px) {
+            top: 32px;
+        }
+    }
 
     @media (prefers-color-scheme: dark) {
         background: $dark__background-body;
@@ -145,21 +158,10 @@
 
 .nerdmachina {
     display: block;
-
-    .path-1 {
-        fill: #00ff99;
-        
-        @media (prefers-color-scheme: dark) {
-            fill: #ff0066;
-        }
-    }
-
-    .path-2 {
-        fill: #ff0066;
-
-        @media (prefers-color-scheme: dark) {
-            fill: #00ff99;
-        }
+    fill: #333;
+    
+    @media (prefers-color-scheme: dark) {
+        fill: #fff;
     }
 }
 

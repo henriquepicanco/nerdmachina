@@ -16,6 +16,6 @@
 	<label for="<?php echo $unique_id; ?>">
 		<span class="screen-reader-text"><?php echo _x( 'Search for:', 'label', 'nerdmachina' ); ?></span>
 	</label>
-	<input type="search" id="<?php echo $unique_id; ?>" class="search-field" placeholder="<?php echo esc_attr_x( 'Digite seus termos de busca e tecle ENTER', 'placeholder', 'nerdmachina' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+	<input type="search" id="<?php echo $unique_id; ?>" class="search-field" placeholder="<?php echo esc_attr_x( 'Pesquisar', 'placeholder', 'nerdmachina' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
 	<button type="submit" class="search-submit"><?php echo nerdmachina_get_theme_svg( 'search' ); ?><span class="screen-reader-text"><?php echo _x( 'Search', 'submit button', 'nerdmachina' ); ?></span></button>
 </form>

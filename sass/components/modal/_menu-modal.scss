@@ -10,6 +10,20 @@
     z-index: 999;
     transition: all 0.5s;
     overflow-x: auto;
+    
+    .admin-bar & {
+        top: 0;
+
+        @media screen and (min-width: 600px) {
+            top: 46px;
+            height: calc(100vh - 46px);
+        }
+
+        @media screen and (min-width: 782px) {
+            top: 32px;
+            height: calc(100vh - 32px);
+        }
+    }
 
 	@media (prefers-color-scheme: dark) {
         background: $dark__background-body;

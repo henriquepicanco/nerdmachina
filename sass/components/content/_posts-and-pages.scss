@@ -62,10 +62,13 @@
 
 		.cat-links {
 			display: block;
-			letter-spacing: 1px;
+			font-size: 0.875rem;
 			text-transform: uppercase;
 			font-weight: bold;
-			margin-bottom: 1rem;
+
+			@media screen and (min-width: 768px) {
+				font-size: 1rem;
+			}
 
 			a {
 				color: #333;
@@ -77,7 +80,7 @@
 		}
 
 		.entry-media {
-			picture {
+			img {
 				font-size: 0;
 				line-height: 0;
 				display: block;
@@ -96,8 +99,8 @@
 			display: flex;
 
 			&:nth-child(1) {
-				flex: 1 0 100px;
-				min-height: 100px;
+				flex: 1 0 125px;
+				min-height: 125px;
 
 				@media screen and (min-width: 768px) {
 					flex: 1 0 300px;
@@ -107,7 +110,7 @@
 
 			&:nth-child(2) {
 				display: flex;
-				flex: 1 0 calc(100% - 100px);
+				flex: 1 0 calc(100% - 125px);
 				padding: 0 1rem;
 				align-items: flex-start;
 				flex-direction: column;
@@ -192,7 +195,7 @@
 
 
 		@media screen and (min-width: 1024px) {
-			picture {
+			img {
 				display: block;
 				overflow: hidden;
 				border-radius: 5px;
@@ -357,7 +360,12 @@
 		
 		.post-previous,
 		.post-next {
+			padding: 1rem;
 			margin-bottom: 2rem;
+
+			@media screen and (min-width: 712px) {
+				padding: 0;
+			}
 
 			.post-outer {
 				display: flex;
@@ -368,14 +376,14 @@
 				display: flex;
 
 				&:nth-child(1) {
-					flex: 1 0 100px;
+					flex: 1 0 125px;
 				}
 
 				&:nth-child(2) {
 					align-items: flex-start;
 					flex-direction: column;
 					justify-content: center;
-					flex: 1 0 calc(100% - 100px);
+					flex: 1 0 calc(100% - 125px);
 					padding: 0 2rem;
 				}
 
@@ -383,20 +391,41 @@
 					margin: 0;
 					font-size: 0;
 					line-height: 0;
+
+					img {
+						font-size: 0;
+						line-height: 0;
+						display: block;
+						overflow: hidden;
+						border-radius: 5px;
+						box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+					}
 				}
 
 				span.tag {
 					display: block;
-					letter-spacing: 1px;
+					font-size: 0.875rem;
 					text-transform: uppercase;
 					font-weight: bold;
 					margin-bottom: 0.625rem;
 				}
 
 				.entry-title {
-					font-size: 1.25rem;
+					font-size: 1rem;
 					margin: 0;
+
+					@media screen and (min-width: 768px) {
+						font-size: 1.5rem;
+					}
 				}
+			}
+		}
+
+		a {
+			color: #333;
+
+			@media (prefers-color-scheme: dark) {
+				color: $dark__color-link;
 			}
 		}
 	}
@@ -405,5 +434,43 @@
 		max-width: 680px;
 		margin-left: auto;
 		margin-right: auto;
+		padding-left: 1rem;
+		padding-right: 1rem;
+
+		@media screen and (min-width: 712px) {
+			padding: 0;
+		}
+	}
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+#disqus_thread {
+	max-width: 680px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+
+	@media screen and (min-width: 712px) {
+		padding: 0;
+	}
+}
+
+#dcl_comment_btn {
+	border: 0;
+	background: #ff0066;
+	color: #fff;
+	font-size: 1.25rem;
+	font-weight: bold;
+	padding: 0.625rem 2rem;
+	border-radius: 50rem;
+	cursor: pointer;
+
+	@media (prefers-color-scheme: dark) {
+		background: $dark__color-button;
+		color: $dark__background-body;
 	}
 }

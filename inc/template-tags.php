@@ -127,16 +127,16 @@ if ( ! function_exists( 'nerdmachina_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 			?>
 
-			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+			<div class="entry-media">
+				<?php the_post_thumbnail( 'nerdmachina_single_thumbnail' ); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
 
-			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+			<a class="entry-media" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php
 					the_post_thumbnail(
-						'post-thumbnail',
+						'nerdmachina_archive_thumbnail',
 						array(
 							'alt' => the_title_attribute(
 								array(
