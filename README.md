@@ -4,6 +4,10 @@ Este é o tema usado no meu blog, [NerdMachina](https://nerdmachina.com). Você 
 
 Este tema está licenciado sob GPL 2.0 ou posterior, assim como o próprio WordPress.
 
+**ATENÇÃO!** Este tema não deve ser usado como está em ambientes de produção. Recomendo que, antes de ativar no seu site, faça todas as modificações necessárias para o seu site. Isto vale não só para você não exibir meu logo por engano, mas também para evitar que você faça um link para o meu site sem necessidade.
+
+**WARNING!** This theme should not be used as it is in production environments. I recommend that, before activating on your site, make all necessary modifications to your site. This is true not only for you not to display my logo by mistake, but also to prevent you from unnecessarily linking to my website.
+
 ## Changelog
 Abaixo, você encontra a lista de todas as mudanças que este já sofreu desde o seu lançamento.
 
