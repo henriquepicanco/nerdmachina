@@ -199,43 +199,6 @@ function nerdmachina_infinite_scroll_ctrl() {
 add_action( 'wp_footer', 'nerdmachina_infinite_scroll_ctrl', 100 );
 
 /**
- * Adiciona uma chave para não armazenar a página em cache.
- * 
- * Isto é um truque para evitar que o Cloudflare arquive páginas
- * visíveis apenas para usuários logados e as sirva para os visitantes.
- *
- * @since NerdMachina 1.1
- * @param string
- */
-function add_nocache_to_url( $url ) {
-   if ( is_user_logged_in()
-		&& stripos( $url, 'nocache') === false ) {
-		$url .= stripos( $url, '?' ) === false ? '?' : '&';
-		$url .= 'nocache=1';
-   }
-
-   return $url;
-}
-
-/**
- * Servir a chave somente para usuários conectados.
- * 
- * Assim, qualquer usuário conectado pode navegar pelas páginas do site
- * sem que nenhuma delas seja armazeadas em cache no Cloudflare.
- * 
- * @since Nerdmachina 1.1
- */
-if ( is_user_logged_in() ) {
-	add_filter( 'home_url', 'add_nocache_to_url', 99, 1 );
-	add_filter( 'post_link', 'add_nocache_to_url', 10, 1 );
-	add_filter( 'page_link', 'add_nocache_to_url', 10, 1 );
-	add_filter( 'post_type_link', 'add_nocache_to_url', 10, 1 );
-	add_filter( 'category_link', 'add_nocache_to_url', 11, 1 );
-	add_filter( 'tag_link', 'add_nocache_to_url', 10, 1 );
-	add_filter( 'author_link', 'add_nocache_to_url', 11, 1 );
-}
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
