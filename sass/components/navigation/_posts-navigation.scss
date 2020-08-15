@@ -26,10 +26,5 @@
         padding: 0.625rem 2rem;
         border-radius: 50rem;
         cursor: pointer;
-
-        @media (prefers-color-scheme: dark) {
-            background: $dark__color-button;
-            color: $dark__background-body;
-        }
     }
 }

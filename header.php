@@ -26,54 +26,76 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'nerdmachina' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-header-main">
-			<div class="site-header__inner">
-				<div class="site-header__inner-wrapper">
-					<div class="site-header__content">
-						<button class="menu-toggle desktop-toggle" aria-controls="menu-modal" aria-expanded="false">
-							<?php echo nerdmachina_get_theme_svg( 'bars' ); ?>
-							<span class="toggle-text"><?php esc_html_e( 'Menu', 'nerdmachina' ); ?></span>
-						</button>
-
-						<button class="search-toggle desktop-toggle" aria-controls="search-modal" aria-expanded="false">
-							<?php echo nerdmachina_get_theme_svg( 'search' ); ?>
-							<span class="toggle-text"><?php esc_html_e( 'Pesquisar', 'nerdmachina' ); ?></span>
-						</button>
-					</div>
-
-					<div class="site-header__content">
-						<button class="menu-toggle mobile-toggle" aria-controls="menu-modal" aria-expanded="false">
-							<?php echo nerdmachina_get_theme_svg( 'bars' ); ?>
-							<span class="screen-reader-text"><?php esc_html_e( 'Abrir menu', 'nerdmachina' ); ?></span>
-						</button>
-
-						<?php get_template_part( 'components/header/site-branding' ); ?>
-
-						<button class="search-toggle mobile-toggle" aria-controls="search-modal" aria-expanded="false">
-							<?php echo nerdmachina_get_theme_svg( 'search' ); ?>
-							<span class="screen-reader-text"><?php esc_html_e( 'Abrir busca', 'nerdmachina' ); ?></span>
-						</button>
-					</div>
-
-					<div class="site-header__content">
-						<?php get_template_part( 'components/navigation/social-navigation' ); ?>
-
-						<a class="donation-toggle" href="https://nerdmachina.com/apoie/">
-							<span class="text-toggle"><?php esc_html_e( 'Apoie-nos', 'nerdmachina' ); ?></span>
-						</a>
+		<div class="navbar navbar-top">
+			<div class="navbar-inner">
+				<div class="navbar-container">
+					<div class="navbar-content">
+						<div class="navbar-col">
+							<?php get_template_part( 'components/navigation/social-navigation' ); ?>
+						</div>
+						<div class="navbar-col">
+							<div class="navbar-brand">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_html( 'Homepage', 'nerdmachina' ); ?>" rel="home">
+									<?php get_template_part( 'components/brand/nerdmachina-lg' ); ?>
+								</a>
+							</div>
+						</div>
+						<div class="navbar-col">
+							<a class="donation-toggle" href="https://nerdmachina.com/apoie/">
+								<?php echo nerdmachina_get_theme_svg( 'heart' ); ?>
+								<span class="text-toggle"><?php esc_html_e( 'Apoie-nos', 'nerdmachina' ); ?></span>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
-
-			<?php get_template_part( 'components/modal/search-modal' ); ?>
 		</div>
+
+		<div class="navbar navbar-primary">
+			<div class="navbar-inner">
+				<div class="navbar-container">
+					<div class="navbar-content">
+						<div class="navbar-col">
+							<button class="offcanvas-toggle">
+								<?php echo nerdmachina_get_theme_svg( 'bars' ); ?>
+								<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'nerdmachina' ); ?></span>
+							</button>
+
+							<div class="navbar-brand">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_html( 'Homepage', 'nerdmachina' ); ?>" rel="home">
+									<?php get_template_part( 'components/brand/nerdmachina-sm' ); ?>
+								</a>
+							</div>
+						</div>
+						<div class="navbar-col">
+							<?php get_template_part( 'components/navigation/main-navigation' ); ?>
+						</div>
+						<div class="navbar-col">
+							<button class="search-toggle">
+								<?php echo nerdmachina_get_theme_svg( 'search' ); ?>
+								<span class="screen-reader-text"><?php esc_html_e( 'Search', 'nerdmachina' ); ?></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="site-search-wrap">
+				<div class="site-search">
+					<div class="container">
+						<?php get_search_form(); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="navbar-dummy"></div>
 	</header>
 
 	<div class="site-content">
 		<?php if ( is_archive() || is_search() ) : ?>
 			<header class="page-header">
-				<div class="page-header__inner">
-					<div class="page-header__inner-wrapper">
+				<div class="page-header-container">
+					<div class="page-header-inner">
 						<?php if ( is_search() ) : ?>
 							<span class="algolia-search">
 								<?php echo nerdmachina_get_theme_svg( 'algolia' ); ?>
@@ -83,6 +105,22 @@
 							</h1>
 						<?php else : ?>
 							<?php
+							// Add special subtitles.
+							if ( is_category() ) {
+								$subtitle = esc_html__( 'Browsing Category', 'squaretype' );
+							} elseif ( is_tag() ) {
+								$subtitle = esc_html__( 'Browsing Tag', 'squaretype' );
+							} else {
+								$subtitle = '';
+							}
+
+							// Add a subtitle, wrapped in <p></p> if it exists.
+							if ( $subtitle ) {
+								?>
+								<p class="page-subtitle title-block"><?php echo esc_html( $subtitle ); ?></p>
+								<?php
+							}
+
 							the_archive_title( '<h1 class="page-title">', '</h1>' );
 							the_archive_description( '<div class="archive-description">', '</div>' );
 						?>
@@ -92,4 +130,6 @@
 			</header>
 		<?php endif; ?>
 
-		<div class="site-content__inner">
+		<div class="site-content-wrapper">
+			<div class="site-content-container">
+				<div class="site-content-inner">

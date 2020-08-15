@@ -1,0 +1,77 @@
+// Import variables and mixins.
+@import "abstracts/abstracts";
+
+.editor-post-title .editor-post-title__input {
+    font-size: 1.75rem;
+    font-family: $font__headings;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.25;
+    color: #000000;
+    word-wrap: break-word;
+
+    @media screen and (min-width: 800px) {
+        font-size: 2.5rem;
+    }
+}
+
+.wp-block {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+.editor-styles-wrapper {
+    & > * {
+        color: $color__text-main;
+        font-family: $font__main;
+        font-size: 1.125rem;
+    	line-height: $font__line-height-body;
+    }
+
+    p {
+        font-size: 1.125rem;
+        line-height: 1.75;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: $font__headings;
+        font-weight: 700;
+        letter-spacing: -1px;
+        line-height: 1.25;
+        color: #000000;
+        word-wrap: break-word;
+    }
+
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    h5 {
+        font-size: 1.25rem;
+    }
+
+    h6 {
+        font-size: 1rem;
+    }
+}

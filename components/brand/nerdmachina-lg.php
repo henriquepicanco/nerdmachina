@@ -1,6 +1,6 @@
-<svg class="nerdmachina" width="171.75" height="40.294" version="1.1" viewBox="0 0 45.442792 10.661023" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <g transform="translate(-.90455 -232.9)">
-        <g transform="matrix(.064721 0 0 .064721 -.53877 229.73)">
+<svg width="252.91" height="60.864" version="1.1" viewBox="0 0 66.915371 16.103581" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <g transform="translate(-.63997 -232.63)">
+        <g transform="matrix(.094549 0 0 .094549 -1.204 228.27)">
             <path d="m185.59 130.63a81.643 81.643 0 0 1 -81.643 81.643 81.643 81.643 0 0 1 -81.643 -81.643 81.643 81.643 0 0 1 81.643 -81.643 81.643 81.643 0 0 1 81.643 81.643z" fill="#f06"/>
             <g transform="matrix(1.0763 0 0 1.0763 -9.1207 -7.6184)">
                 <g fill="#f06" aria-label="N">
@@ -11,8 +11,7 @@
                 </g>
             </g>
         </g>
-
-        <g transform="matrix(.16843 0 0 .16843 .75219 193.67)" fill="inherit" stroke-width=".13933" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="NERDMACHINA">
+        <g transform="matrix(.24606 0 0 .24606 .68198 175.59)" fill="inherit" stroke-width=".13933" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="NERDMACHINA">
             <path d="m84.019 273.84q-1.7924-3.1834-3.879-6.2866-2.0866-3.1032-4.4408-5.8586v12.145h-4.1198v-18.539h3.3975q0.88281 0.8828 1.9529 2.1669 1.0701 1.2841 2.1669 2.7554 1.1236 1.4446 2.2204 3.023 1.0968 1.5516 2.0599 2.9962v-10.941h4.1465v18.539z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
             <path d="m91.8 273.84v-18.539h12.52v3.5045h-8.3465v3.6382h7.4102v3.4242h-7.4102v4.4675h8.9618v3.5045z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
             <path d="m113.43 255.09q4.1733 0 6.3937 1.4981 2.2204 1.4713 2.2204 4.6013 0 1.9529-0.90956 3.1834-0.88281 1.2038-2.5682 1.8994 0.56178 0.69555 1.1771 1.6051 0.61529 0.8828 1.2038 1.8726 0.61529 0.96306 1.1771 2.0331 0.56179 1.0433 1.0433 2.0599h-4.6816q-0.50828-0.90956-1.0433-1.8459-0.50828-0.93631-1.0701-1.8191-0.53503-0.8828-1.0701-1.6586-0.53504-0.80255-1.0701-1.4446h-2.0599v6.7682h-4.1733v-18.271q1.3643-0.26751 2.8089-0.37452 1.4713-0.10701 2.6217-0.10701zm0.24077 3.558q-0.45478 0-0.8293 0.0268-0.34778 0.0268-0.6688 0.0535v5.0293h1.1771q2.3542 0 3.3707-0.58854 1.0166-0.58853 1.0166-2.0064 0-1.3643-1.0433-1.9261-1.0166-0.58854-3.0229-0.58854z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>

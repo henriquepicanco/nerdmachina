@@ -29,11 +29,12 @@
         </div>
         
         <div class="entry-meta">
-            <?php
-            nerdmachina_posted_on();
-            nerdmachina_posted_by();
-            ?>
-        </div>
+			<?php
+			nerdmachina_posted_by();
+			echo " - ";
+			nerdmachina_posted_on();
+			?>
+		</div>
     </header><!-- .entry-header -->
     
     <?php nerdmachina_post_thumbnail(); ?>

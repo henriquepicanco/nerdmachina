@@ -2,12 +2,8 @@
     border-top: 1px solid $color__border-abbr;
     padding: 0.625rem 0;
 
-    @media (prefers-color-scheme: dark) {
-        border-color: $dark__border-color;
-    }
-
     &__inner {
-        max-width: 1366px;
+        max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
@@ -24,10 +20,6 @@
 
         a {
             color: #333;
-
-            @media (prefers-color-scheme: dark) {
-                color: $dark__color-link;
-            }
         }
     }
 }

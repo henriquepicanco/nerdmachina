@@ -27,7 +27,7 @@ if ( ! function_exists( 'nerdmachina_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Publicado em %s', 'post date', 'nerdmachina' ),
+			esc_html_x( '%s', 'post date', 'nerdmachina' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -43,7 +43,7 @@ if ( ! function_exists( 'nerdmachina_posted_by' ) ) :
 	function nerdmachina_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'por %s', 'post author', 'nerdmachina' ),
+			esc_html_x( 'Por %s', 'post author', 'nerdmachina' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 

@@ -1,49 +1,24 @@
-body {
-    overflow-x: hidden;
-    
-    #page {
-        display: block;
-        transform: translateX(0);
-        transition: transform 0.5s;
-    }
-
-    &.offcanvas-active {
-        overflow: hidden;
-
-        #page {
-            transform: translateX(20.75rem);
-            transition: transform 0.5s;
-        }
-
-        &:after {
-            content: "";
-            position: fixed;
-            opacity: 1;
-            background: rgba(0, 0, 0, 0.5);
-            height: 100vh;
-            width: 100vw;
-            top: 0;
-
-            animation: fade .5s;
-        }
-    }
-}
-
 /* Header
 --------------------------------------------- */
 @import "header/site-header";
+@import "header/search-wrap";
 
-/* Modals
+/* Off-canvas
 --------------------------------------------- */
-@import "modal/menu-modal";
-@import "modal/search-modal";
+@import "offcanvas/offcanvas";
 
 /* Navigation
 --------------------------------------------- */
 @import "navigation/main-navigation";
+@import "navigation/mobile-navigation";
 @import "navigation/social-navigation";
+@import "navigation/post-navigation";
 @import "navigation/posts-navigation";
 @import "navigation/footer-navigation";
+
+/* Layout
+--------------------------------------------- */
+@import "layout/layout";
 
 /* Posts and pages
 --------------------------------------------- */
@@ -72,3 +47,7 @@ body {
 /* Footer
 --------------------------------------------- */
 @import "footer/site-footer";
+
+/* Error 404
+--------------------------------------------- */
+@import "404/error-404";

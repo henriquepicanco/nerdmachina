@@ -1,7 +1,3 @@
 body {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
-
-	@media (prefers-color-scheme: dark) {
-		background: $dark__background-body;
-	}
 }

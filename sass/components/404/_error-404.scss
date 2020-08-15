@@ -1,0 +1,52 @@
+.error-404 {
+    display: block;
+
+    .page-title {
+        margin: 0 0 2rem;
+    }
+
+    @media screen and (min-width: 600px) {
+        
+        &-widgets {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -1.25rem;
+            margin-left: -1.25rem;
+            margin-top: 4rem;
+
+            .widget {
+                position: relative;
+                width: 100%;
+                padding-right: 1.25rem;
+                padding-left: 1.25rem;
+                flex: 0 0 50%;
+                max-width: 50%;
+
+                @media screen and (min-width: 1020px) {
+                    flex: 0 0 33.3333333%;
+                    max-width: 33.3333333%;
+
+                    &.widget_tag_cloud {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .widgettitle {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                margin-bottom: 1.5rem;
+                font-size: .875rem;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+    }
+}

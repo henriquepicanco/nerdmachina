@@ -48,7 +48,7 @@ if ( ! function_exists( 'nerdmachina_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// For the archive pages
-		add_image_size( 'nerdmachina_archive_thumbnail', 300, 300, true );
+		add_image_size( 'nerdmachina_archive_thumbnail', 560, 336, true );
 
 		// For the single pages
 		add_image_size( 'nerdmachina_single_thumbnail', 1024, 576, true );
@@ -60,6 +60,7 @@ if ( ! function_exists( 'nerdmachina_setup' ) ) :
 		register_nav_menus(
 			array(
 				'main' => esc_html__( 'Primary', 'nerdmachina' ),
+				'mobile' => esc_html__( 'Mobile', 'nerdmachina' ),
 				'social' => esc_html__( 'Social', 'nerdmachina' ),
 				'footer' => esc_html__( 'Footer', 'nerdmachina' ),
 			)
@@ -152,6 +153,17 @@ function nerdmachina_scripts() {
 	//}
 }
 add_action( 'wp_enqueue_scripts', 'nerdmachina_scripts' );
+
+/**
+ * Enqueue supplemental block editor styles.
+ */
+function nerdmachina_block_editor_styles() {
+
+	// Enqueue the editor styles.
+	wp_enqueue_style( 'nerdmachina-block-editor-styles', get_theme_file_uri( '/assets/css/editor-styles.min.css' ), array(), wp_get_theme()->get( 'Version' ), 'all' );
+}
+
+add_action( 'enqueue_block_editor_assets', 'nerdmachina_block_editor_styles', 1, 1 );
 
 /**
  * Change archive headers

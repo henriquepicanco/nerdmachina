@@ -1,3 +1,44 @@
+.site-overlay {
+    display: none;
+}
+
+.offcanvas {
+
+    .site-header .navbar,
+    #page>section,
+    #page>span,
+    #page>div,
+    #page>p {
+        transition: all .5s ease;
+    }
+
+}
+
+.offcanvas-active {
+    overflow: hidden;
+
+    .site-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0,0,0,.15);
+        animation: fade .5s;
+        z-index: 9999;
+    }
+
+    .site-header .navbar,
+    #page>section,
+    #page>span,
+    #page>div,
+    #page>p {
+        transition: all .5s ease;
+        transform: translate3d(332px, 0, 0);
+    }
+}
+
 .menu-modal {
     top: 0;
     position: fixed;
@@ -7,7 +48,7 @@
     height: 100vh;
     background: $color__background-body;
     border-right: 1px solid $color__border-abbr;
-    z-index: 999;
+    z-index: 99999;
     transition: all 0.5s;
     overflow-x: auto;
     
@@ -25,11 +66,6 @@
         }
     }
 
-	@media (prefers-color-scheme: dark) {
-        background: $dark__background-body;
-        border-color: $dark__border-color;
-	}
-
     &.offcanvas-active {
         left: 0;
         transition: all 0.5s;
@@ -42,10 +78,6 @@
         height: 3.8125rem;
         padding: 0 2rem;
         border-bottom: 1px solid $color__border-abbr;
-
-        @media (prefers-color-scheme: dark) {
-            border-color: $dark__border-color;
-        }
 
         button {
             display: flex;
@@ -61,19 +93,8 @@
             width: auto;
             height: auto;
             color: #333;
-
-            @media (prefers-color-scheme: dark) {
-                color: $dark__color-text;
-            }
         }
     }
-
-    
-	@media (prefers-color-scheme: dark) {
-        a {
-            color: $dark__color-link;
-        }
-	}
 
     .social-navigation {
         padding: 2rem;
